@@ -1,0 +1,27 @@
+#container {
+  padding: 70px 0;
+  text-align: center;
+}
+
+#counter {
+  font-size: 6em;
+}
+
+#decrement {
+  background-color: red;
+  height: 50px;
+  width:  50px;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+#increment {
+  background-color: green;
+  height: 50px;
+  width:  50px;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: baseline;
+}
+
