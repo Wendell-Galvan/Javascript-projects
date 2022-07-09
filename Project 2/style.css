@@ -1,0 +1,14 @@
+#container {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.header {
+	font-size: 4em;
+}
+
+#colors{
+	height: 25px;
+	width: 75px;
+	text-align: center;
+}
