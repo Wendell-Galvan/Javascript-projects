@@ -10,14 +10,21 @@ your JavaScript function. To solve this, Google "html prevent form submit" and t
 */
 
 
+let chooseNum = document.getElementById('chooseNum');
+
+chooseNum.addEventListener('submit', function(event){
+	event.preventDefault();
+})
+
 const randomNumber = Math.floor(Math.random() * 100) + 1;
-    console.log('Random Number', randomNumber);
+   console.log('Random Number', randomNumber);
 
 function chooseNumber(){
+	let feedback = document.getElementById('feedback');
 	let userGuess = document.getElementById('guess').value;
 
 	if (userGuess === randomNumber){
-		alert ("Nice guess! You win")
+		return feedback.textContent = "You got it right!";
 	};
 
 };
