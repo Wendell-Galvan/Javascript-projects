@@ -19,9 +19,14 @@ chooseNum.addEventListener('submit', function(event){
 const randomNumber = Math.floor(Math.random() * 100) + 1;
    console.log('Random Number', randomNumber);
 
+   console.log(typeof randomNumber);
+
 function chooseNumber(){
 	let feedback = document.getElementById('feedback');
 	let userGuess = document.getElementById('guess').value;
+
+	typeof userGuess;
+	typeof randomNumber;
 
 	if (userGuess === randomNumber){
 		return feedback.textContent = "You got it right!";

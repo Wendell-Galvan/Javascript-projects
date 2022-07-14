@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 <title>Number Guessing Game</title>
@@ -15,7 +15,8 @@
     <p>We have selected a random number between 1 and 100. You have 3 chances to guess the correct number. Good luck!</p>
 
     <form id="chooseNum" onsubmit="chooseNumber()">
-  		Enter number: <input id="guess" type="text">
+    	<label for="guess">Enter number:</label>
+  		<input id="guess" type="number">
   		<input type="submit">
   		<p id="feedback"></p>
 	</form>
