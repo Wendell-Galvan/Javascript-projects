@@ -20,8 +20,10 @@ function chooseNumber(event){
 
 	let feedback = document.getElementById('feedback');
 	let userGuess = document.getElementById('guess').valueAsNumber; 
-	
-	if (userGuess === randomNumber){
+
+	if (userGuess < 1 || userGuess > 100){
+		feedback.textContent = "Not a valid number. Please guess a number between 1 and 100";
+	} else if (userGuess === randomNumber){
 		feedback.textContent = "Congrats! You got it right.";
 	} else if (userGuess < randomNumber){
 		feedback.textContent = "Too low! You guessed " + userGuess + ". Try again";
@@ -38,6 +40,7 @@ playAgain.addEventListener('click', function(){
 	document.getElementById('guess').value = '';
 	guessCount = 0;
 	randomNumber = Math.floor(Math.random() * 100) + 1;
+		console.log('Random Number', randomNumber);
 })
 
 
@@ -48,6 +51,7 @@ submitButton.addEventListener('click', function(){
 		alert("Game over. Try again.");
 		document.getElementById('guess').value = '';
 		guessCount = 0;
-		randomNumber = Math.floor(Math.random() * 100) + 1;		
+		randomNumber = Math.floor(Math.random() * 100) + 1;
+			console.log('Random Number', randomNumber);	
 	}
 })
