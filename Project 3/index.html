@@ -10,18 +10,25 @@
 </head>
 <body>
 
-<h1>Number guessing game</h1>
+<div id="container">
 
-    <p>We have selected a random number between 1 and 100. You have 3 chances to guess the correct number. Good luck!</p>
+	<h1 class="header">Number Guessing Game</h1>
 
-    <form id="chooseNum" onsubmit="chooseNumber()">
-    	<label for="guess">Enter number:</label>
-  		<input id="guess" type="number">
-  		<input type="submit">
-  		<p id="feedback"></p>
-	</form>
-    
+	    <p>We have selected a random number between 1 and 100. You have 3 chances to guess the correct number. Good luck!</p>
+
+	    <form id="chooseNum" onsubmit="chooseNumber(event)">
+	    	<label for="guess">Enter number:</label>
+	  		<input id="guess" type="number">
+	  		<input id="submit" type="submit">
+	  		<button id="playAgain">Play again</button>
+		</form>
+
+		
+	<div id="results">
+		<p id="feedback"></p>	
+	</div>
 	
+</div>	
  
 
 <script src="script.js"></script>

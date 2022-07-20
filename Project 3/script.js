@@ -9,22 +9,45 @@ trying to actually submit data to a backend somewhere, but there's no backend, y
 your JavaScript function. To solve this, Google "html prevent form submit" and that should point you in the right direction.
 */
 
-
-let chooseNum = document.getElementById('chooseNum');
-
-chooseNum.addEventListener('submit', function(event){
-	event.preventDefault();
-})
-
-const randomNumber = Math.floor(Math.random() * 100) + 1;
+let submitButton = document.getElementById('submit');
+let playAgain = document.getElementById('playAgain');
+let randomNumber = Math.floor(Math.random() * 100) + 1;
    console.log('Random Number', randomNumber);
+let guessCount = 0;
 
-function chooseNumber(){
+function chooseNumber(event){
+	event.preventDefault();
+
 	let feedback = document.getElementById('feedback');
-	let userGuess = document.getElementById('guess').value;
-
+	let userGuess = document.getElementById('guess').valueAsNumber; 
+	
 	if (userGuess === randomNumber){
-		return feedback.textContent = "You got it right!";
-	};
+		feedback.textContent = "Congrats! You got it right.";
+	} else if (userGuess < randomNumber){
+		feedback.textContent = "Too low! You guessed " + userGuess + ". Try again";
+	} else if (userGuess > randomNumber){
+		feedback.textContent = "Too high! You guessed " + userGuess + ". Try again";
+	} else {
+		feedback.textContent = "Guess a number between 1 and 100";
+	}
 
 };
+
+//Reload game
+playAgain.addEventListener('click', function(){
+	document.getElementById('guess').value = '';
+	guessCount = 0;
+	randomNumber = Math.floor(Math.random() * 100) + 1;
+})
+
+
+//Game over reset 
+submitButton.addEventListener('click', function(){
+	guessCount++;
+	if (guessCount === 3){
+		alert("Game over. Try again.");
+		document.getElementById('guess').value = '';
+		guessCount = 0;
+		randomNumber = Math.floor(Math.random() * 100) + 1;		
+	}
+})
