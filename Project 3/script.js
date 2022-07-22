@@ -33,6 +33,16 @@ function chooseNumber(event){
 		feedback.textContent = "Guess a number between 1 and 100";
 	}
 
+	guessCount++;
+	if (guessCount === 3){
+		alert("Your three attempts are up! Game over. Try again.");
+		feedback.textContent = "Guess a number between 1 and 100";
+		document.getElementById('guess').value = '';
+		guessCount = 0;
+		randomNumber = Math.floor(Math.random() * 100) + 1;
+			console.log('Random Number', randomNumber);	
+	}
+
 };
 
 //Reload game
@@ -45,13 +55,13 @@ playAgain.addEventListener('click', function(){
 
 
 //Game over reset 
-submitButton.addEventListener('click', function(){
-	guessCount++;
-	if (guessCount === 3){
-		alert("Game over. Try again.");
-		document.getElementById('guess').value = '';
-		guessCount = 0;
-		randomNumber = Math.floor(Math.random() * 100) + 1;
-			console.log('Random Number', randomNumber);	
-	}
-})
+// submitButton.addEventListener('click', function(){
+// 	guessCount++;
+// 	if (guessCount === 3){
+// 		alert("Your three attempts are up! Game over. Try again.");
+// 		document.getElementById('guess').value = '';
+// 		guessCount = 0;
+// 		randomNumber = Math.floor(Math.random() * 100) + 1;
+// 			console.log('Random Number', randomNumber);	
+// 	}
+// })
