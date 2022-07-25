@@ -1,0 +1,9 @@
+.header {
+  font-size: 4em;
+}
+
+#container {
+  padding: 70px 0;
+  text-align: center;
+  background-color: slategray;
+}
