@@ -34,7 +34,7 @@ function chooseNumber(event){
 	}
 
 	guessCount++;
-	if (guessCount === 3){
+	if (guessCount === 4){
 		alert("Your three attempts are up! Game over. Try again.");
 		feedback.textContent = "Guess a number between 1 and 100";
 		document.getElementById('guess').value = '';
