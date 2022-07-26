@@ -32,14 +32,20 @@ rock.addEventListener('click', function(){
         answer.textContent = "ROCK";
         feedback.textContent = "Draw! Try again.";
         rock.style.backgroundColor = 'white';
+        paper.disabled = true;
+        scissors.disabled = true;
     } else if (compAnswer === "paper"){
         answer.textContent = "PAPER";
         feedback.textContent = "Sorry! Paper beats rock. Try again.";
         rock.style.backgroundColor = 'red';
+        paper.disabled = true;
+        scissors.disabled = true;
     } else {
         answer.textContent = "SCISSORS";
         feedback.textContent = "Rock beats scissors, you win!";
         rock.style.backgroundColor = 'green';
+        paper.disabled = true;
+        scissors.disabled = true;
     }
 
     document.getElementById("reset").disabled = false;
@@ -51,14 +57,20 @@ paper.addEventListener('click', function(){
         answer.textContent = "PAPER";
         feedback.textContent = "Draw! Try again.";
         paper.style.backgroundColor = 'white';
+        rock.disabled = true;
+        scissors.disabled = true;
     } else if (compAnswer === "scissors"){
         answer.textContent = "SCISSORS";
         feedback.textContent = "Sorry! Scissors beats paper. Try again.";
         paper.style.backgroundColor = 'red';
+        rock.disabled = true;
+        scissors.disabled = true;
     } else {
         answer.textContent = "ROCK";
         feedback.textContent = "Paper beats rock, you win!";
         paper.style.backgroundColor = 'green';
+        rock.disabled = true;
+        scissors.disabled = true;
     }
 
     document.getElementById("reset").disabled = false;
@@ -70,14 +82,20 @@ scissors.addEventListener('click', function(){
         answer.textContent = "SCISSORS";
         feedback.textContent = "Draw! Try again.";
         scissors.style.backgroundColor = 'white';
+        rock.disabled = true;
+        paper.disabled = true;
     } else if (compAnswer === "rock"){
         answer.textContent = "ROCK";
         feedback.textContent = "Sorry! Rock beats scissors. Try again.";
         scissors.style.backgroundColor = 'red';
+        rock.disabled = true;
+        paper.disabled = true;
     } else {
         answer.textContent = "PAPER";
         feedback.textContent = "Scissors beats paper, you win!";
         scissors.style.backgroundColor = 'green';
+        rock.disabled = true;
+        paper.disabled = true;
     }
 
     document.getElementById("reset").disabled = false;
@@ -92,6 +110,9 @@ function resetGame(){
     rock.style.backgroundColor = '';
     paper.style.backgroundColor = '';
     scissors.style.backgroundColor = '';
+    paper.disabled = false;
+    scissors.disabled = false;
+    rock.disabled = false;
     
     rock.addEventListener('click', function(){
     if (compAnswer === "rock"){

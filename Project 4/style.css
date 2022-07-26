@@ -7,3 +7,9 @@
   text-align: center;
   background-color: slategray;
 }
+
+#answer {
+  font-weight: bold;
+  border: 5px solid black;
+  display: inline-block;
+}
