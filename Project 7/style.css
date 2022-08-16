@@ -1,0 +1,23 @@
+#container{
+	text-align: center;
+}
+#cost{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#tip{
+	margin-top: 1em;
+	margin-bottom: 3em;
+}
+#totalCost{
+	font-size: 2em;
+	font-weight: bold;
+	color: green;
+}
+#reset{
+	margin-top: 2 em;
+}
+#plus{
+	font-size: 2em;
+	font-weight: bold;
+}
