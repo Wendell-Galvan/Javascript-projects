@@ -1,0 +1,17 @@
+#container{
+	background-color: navajowhite;
+}
+#prompt {
+	margin-bottom: 2em;
+	font-size: 2em;
+	font-weight: bold;
+}
+#questionThree {
+	margin-bottom: 2em;
+}
+#submit{
+	margin-bottom: 2em;
+}
+#questions{
+	align-content: flex-start;
+}

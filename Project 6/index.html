@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Build a Quiz</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="container">
+
+  <p id="prompt">Please Answer the Questions Below</p>
+
+    <form onsubmit="return false;">
+      <p id="questions">1. Who invented the first computer?<br>
+        <input type="radio" id="alanTuring" name="ans1" value="alanTuring">
+        <label for="alanTuring">Alan Turing</label><br>
+        <input type="radio" id="charlesBabbage" name="ans1" value="charlesBabbage">
+        <label for="charlesBabbage">Charles Babbage</label><br>
+        <input type="radio" id="johnHerschel" name="ans1" value="johnHerschel">
+        <label for="johnHerschel">John Herschel</label><br>
+        <input type="radio" id="steveJobs" name="ans1" value="steveJobs">
+        <label for="steveJobs">Steve Jobs</label>
+        <p id="answerOne"></p>
+      </p>
+
+      <p id="questions">2. When was the first fully functional, digital computer invented?<br>
+        <input type="radio" id="1901" name="ans2" value="1901">
+        <label for="1901">1901</label><br>
+        <input type="radio" id="1985" name="ans2" value="1985">
+        <label for="1985">1985</label><br>
+        <input type="radio" id="1946" name="ans2" value="1946">
+        <label for="1946">1946</label><br>
+        <input type="radio" id="1996" name="ans2" value="1996">
+        <label for="1996">1996</label>
+        <p id="answerTwo"></p>
+      </p>
+    
+      <p id="questions">3. Who was the first computer programmer?<br>
+        <input type="radio" id="adaLovelace" name="ans3" value="adaLovelace">
+        <label for="adaLovelace">Ada Lovelace</label><br>
+        <input type="radio" id="steveWozniak" name="ans3" value="steveWozniak">
+        <label for="steveWozniak">Steve Wozniak</label><br>
+        <input type="radio" id="georgeBoole" name="ans3" value="georgeBoole">
+        <label for="georgeBoole">George Boole</label><br>
+        <input type="radio" id="graceHopper" name="ans3" value="graceHopper">
+        <label for="graceHopper">Grace Hopper</label>
+        <p id="answerThree"></p>
+      </p>
+    
+      <input onclick="answer()" type="submit" id="submit" value="Submit"><br>
+      <button button type="button" id="reset" onclick="resetGame()">Reset</button>
+    </form>
+
+
+
+</div>	
+ 
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
