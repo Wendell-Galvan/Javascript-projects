@@ -1,16 +1,30 @@
 #container{
+	margin: auto;
 	text-align: center;
+	border-radius: 15px;
+	height: 600px;
+	width: 400px;
+    background-color: dodgerblue;
+}
+.header{
+	margin-top: 1em;
+	color: lawngreen;
 }
 #cost{
 	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-right: 10px;
+	/*margin-bottom: 1em;*/
 }
 #tip{
+	margin-left: 10px;
 	margin-top: 1em;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
+}
+#tipCost{
+	margin-bottom: 1em;
 }
 #totalCost{
-	font-size: 2em;
+	font-size: 3em;
 	font-weight: bold;
 	color: green;
 }

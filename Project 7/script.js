@@ -9,12 +9,26 @@
 
 
 
+
+//calculator function 
 function calcCost(){
-	var cost = document.getElementById('cost').valueAsNumber;
-	var tip = document.getElementById('tip').valueAsNumber;
-	var total = document.getElementById('totalCost');
+	let cost = document.getElementById('cost').valueAsNumber;
+	let tip = document.getElementById('tip').valueAsNumber;
+	let tipCost = document.getElementById('tipCost')
+	let total = document.getElementById('totalCost');
 
-	console.log(cost * (tip / 100));
-	total.textContent = cost * (tip / 100);
+	//console.log(cost * (tip / 100));
+	let tipAnswer = cost * (tip / 100); 
+	let costAnswer = tipAnswer + cost;
+	//.toFixed() method rounds to nearest decimal place indicated in parenthesis  
+	tipCost.textContent = `Tip amount: $ ${tipAnswer.toFixed(2)}`;
+	totalCost.textContent = `Total: $ ${costAnswer.toFixed(2)}`;
 
+}
+
+//reset function 
+function resetCalc(){
+	document.getElementById("calcForm").reset();
+	tipCost.textContent = "";
+	totalCost.textContent = "";
 }

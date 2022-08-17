@@ -12,19 +12,22 @@
 
 <div id="container">
 
-	<h1 class="header">Calculate Your Tip Below</h1>
+	<h1 class="header">Tip Calculator</h1>
 
-	<form onsubmit="return false">
+	<form id="calcForm" onsubmit="return false">
 		<label for="cost">Cost:</label><br>
-  		<input type="number" id="cost" name="cost"><br>
+		<label for="cost">$</label>
+  		<input type="number" id="cost" name="cost" step=".01"><br>
   		<p id="plus">+</p><br>
   		<label for="tip">Tip percentage:</label><br>
-  		<input type="number" id="tip" name="tip"><br>
-  		<button onclick="calcCost()">=</button>
+  		<input type="number" id="tip" name="tip">
+  		<label for="tip">%</label><br>
+  		<p id="tipCost"></p><br>
+  		<button onclick="calcCost()">Calculate</button>
 	</form>
 
 	<p id="totalCost"></p>
-	<button button type="button" id="reset" onclick="resetGame()">Reset</button>
+	<button button type="button" id="reset" onclick="resetCalc()">Reset</button>
 	
 	
 </div>	
