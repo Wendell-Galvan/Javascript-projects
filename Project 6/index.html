@@ -14,7 +14,7 @@
 
   <p id="prompt">Please Answer the Questions Below</p>
 
-    <form onsubmit="return false;">
+    <form id="quizForm" onsubmit="return false;">
       <p id="questions">1. Who invented the first computer?<br>
         <input type="radio" id="alanTuring" name="ans1" value="alanTuring">
         <label for="alanTuring">Alan Turing</label><br>
@@ -55,7 +55,8 @@
       <br>
     
       <input onclick="answer()" type="submit" id="submit" value="Submit"><br>
-      <button button type="button" id="reset" onclick="resetGame()">Reset</button>
+      <input type="reset" value="Reset" onclick="resetGame()">
+      <!-- <button button type="button" id="reset" onclick="resetGame()">Reset</button> -->
     </form>
 
 

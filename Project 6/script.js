@@ -68,20 +68,8 @@ function answer(){
 }
 
 function resetGame(){
-	let reset1 = document.getElementsByName("ans1");
-	   for(let i=0;i<reset1.length;i++)
-	      reset1[i].checked = false;
 	answerOne.textContent ="";
-
-
-	let reset2 = document.getElementsByName("ans2");
-	   for(let i=0;i<reset2.length;i++)
-	      reset2[i].checked = false;
 	answerTwo.textContent ="";
-
-
-	let reset3 = document.getElementsByName("ans3");
-	   for(let i=0;i<reset3.length;i++)
-	      reset3[i].checked = false;
 	answerThree.textContent ="";
+
 }
